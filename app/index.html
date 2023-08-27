@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <title>Card dengan Navbar</title>
+  </head>
+
+  <body>
+    <div class="container mt-4">
+      <div class="card">
+        <div class="card-header">
+          <ul class="nav nav-tabs card-header-tabs">
+            <li class="nav-item">
+              <a class="nav-link active" id="tab1" href="#content1">Tab 1</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" id="tab2" href="#content2">Tab 2</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" id="tab3" href="#content3">Tab 3</a>
+            </li>
+          </ul>
+        </div>
+        <div class="card-body">
+          <div id="content1">
+            <h5 class="card-title">Konten Tab 1</h5>
+            <p class="card-text">Ini adalah konten tab 1.</p>
+          </div>
+          <div id="content2" style="display: none">
+            <h5 class="card-title">Konten Tab 2</h5>
+            <p class="card-text">Ini adalah konten tab 2.</p>
+          </div>
+          <div id="content3" style="display: none">
+            <h5 class="card-title">Konten Tab 3</h5>
+            <p class="card-text">Ini adalah konten tab 3.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      $(document).ready(function () {
+        $("#tab1").click(function () {
+          $("#content1").show();
+          $("#content2").hide();
+          $("#content3").hide();
+        });
+
+        $("#tab2").click(function () {
+          $("#content1").hide();
+          $("#content2").show();
+          $("#content3").hide();
+        });
+
+        $("#tab3").click(function () {
+          $("#content1").hide();
+          $("#content2").hide();
+          $("#content3").show();
+        });
+      });
+    </script>
+  </body>
+</html>
